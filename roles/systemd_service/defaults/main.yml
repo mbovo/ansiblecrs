@@ -1,0 +1,22 @@
+---
+# defaults file for systemd_service
+
+# Required fields are descriptiom. after, type and commands
+
+service:
+  name: "test"
+  description: "A simple test service, does nothing"
+  after: "network.target nginx.service"
+  type: "basic"
+  commands: {}
+#   startPre:
+#   start: 
+#   stop:
+#   reload:
+# environmentFile:
+# PIDFile: 
+# KillSignal:
+# user: vagrant
+# group: vagrant
+
+start_service: no

@@ -1,0 +1,11 @@
+---
+# defaults file for java
+
+java_version: "8"
+
+debian_java_packages:
+  - "openjdk-{{ java_version }}-jdk-headless"
+  - "openjdk-{{ java_version }}-jre-headless"
+
+redhat_java_packages:
+  - "java-1.{{ java_version }}.0-openjdk-headless"

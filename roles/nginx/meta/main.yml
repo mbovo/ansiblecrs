@@ -1,0 +1,31 @@
+galaxy_info:
+  author: manuel.bovo@kiratech.it
+  description: Install NGXIN for various linux distros
+  company: Kiratech S.p.a
+  
+  # issue_tracker_url: http://example.com/issue/tracker
+
+  license: Apache
+
+  min_ansible_version: 2.4
+
+  platforms:
+  - name: Fedora
+    versions:
+    - all
+  - name: RedHat
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+    
+  galaxy_tags:
+    - nginx
+    - webserver
+    - proxy
+
+dependencies: []

@@ -1,0 +1,12 @@
+---
+
+- name: Install openjdk (debian family)
+  apt:
+    name: "{{debian_java_packages}}"
+    state: present
+  when: ansible_os_family == 'Debian'
+
+- name: "Set JAVA_HOME for all users"
+  lineinfile:
+    path: "/etc/environment"
+    line: 'JAVA_HOME="/usr/lib/jvm/java-{{java_version}}-openjdk-amd64/"'

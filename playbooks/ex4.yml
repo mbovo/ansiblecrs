@@ -1,0 +1,24 @@
+---
+
+- hosts: all
+  become: yes
+  become_user: root
+  gather_facts: yes
+  vars: []
+  tasks:
+    - include_role: 
+        name: nginx
+    - include_role:
+        name: java
+    - include_role:
+        name: systemd_service
+      vars:
+        start_service: yes
+        service:
+          name: "thisisatest"
+          description: "A simple test service, does nothing"
+          after: "network.target nginx.target"
+          type: "basic"
+          commands:
+            start: /bin/false
+            stop: /bin/false

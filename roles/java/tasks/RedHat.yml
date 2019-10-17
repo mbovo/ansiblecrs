@@ -1,0 +1,11 @@
+---
+- name: "Install openjdk (redhat family)"
+  yum:
+    name: "{{redhat_java_packages}}"
+    state: present
+  when: ansible_os_family == 'RedHat'
+
+- name: "Set JAVA_HOME for all users"
+  lineinfile:
+    path: "/etc/profile"
+    line: 'JAVA_HOME="/usr/lib/jvm/java-1.{{java_version}}.0-openjdk/"'

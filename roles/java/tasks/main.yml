@@ -1,0 +1,4 @@
+---
+# tasks file for java
+
+- include_tasks: "{{ ansible_os_family }}.yml"

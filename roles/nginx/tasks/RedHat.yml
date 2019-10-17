@@ -1,0 +1,13 @@
+---
+
+- name: "Install epel (readhat family)"
+  yum:
+    name: epel-release
+    state: present
+  when: ansible_os_family == 'RedHat'
+
+- name: "Install nginx (readhat family)"
+  yum:
+    name: nginx
+    state: present
+  when: ansible_os_family == 'RedHat'

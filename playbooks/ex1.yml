@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  become: yes
+  become_user: root
+  gather_facts: yes
+  vars: []
+  tasks:
+    - include_role: 
+        name: nginx

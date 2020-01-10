@@ -1,3 +1,5 @@
 # Python virtualenv
 venv
 *.retry
+DATA
+.vagrant
